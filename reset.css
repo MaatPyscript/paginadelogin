@@ -1,0 +1,16 @@
+
+/*
+    Remova todos os estilos do "User-Agent-Stylesheet", exceto a propriedade 'display'
+  A parte "símbolo *" é para resolver o bug do sprite do Firefox SVG
+ */
+ *:where(:not(html, iframe, canvas, img, svg, video):not(svg *, symbol *)) {
+    display: revert;
+}
+
+/* Valor de tamanho de caixa preferido */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
